@@ -50,9 +50,40 @@
                     {{#if @site.facebook}}
                         <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
+
                     {{#if @site.twitter}}
                         <a class="gh-social-link gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                     {{/if}}
+
+                    {{!-- CUSTOM.CHANGE: Added new socials connections --}}
+                    {{#if @custom.instagram_page}}
+                        <a class="gh-social-link" href="{{ @custom.instagram_page }}" title="Instagram" target="_blank" rel="noopener">{{> "icons/custom/instagram"}}</a>
+                    {{/if}}
+
+                    {{#if @custom.linkedin_page}}
+                        <a class="gh-social-link" href="{{ @custom.linkedin_page }}" title="LinkedIn" target="_blank" rel="noopener">{{> "icons/custom/linkedin"}}</a>
+                    {{/if}}
+
+                    {{#if @custom.youtube_page}}
+                        <a class="gh-social-link" href="{{ @custom.youtube_page }}" title="YouTube" target="_blank" rel="noopener">{{> "icons/custom/youtube"}}</a>
+                    {{/if}}
+
+                    {{#if @custom.telegram_page}}
+                        <a class="gh-social-link" href="{{ @custom.telegram_page }}" title="Telegram" target="_blank" rel="noopener">{{> "icons/custom/telegram"}}</a>
+                    {{/if}}
+
+                    {{#if @custom.notes_page}}
+                        <a class="gh-social-link" href="{{ @custom.notes_page }}" title="Notes" rel="noopener">{{> "icons/custom/notes"}}</a>
+                    {{/if}}
+
+                    {{#if @custom.github_page}}
+                        <a class="gh-social-link" href="{{ @custom.github_page }}" title="GitHub" target="_blank" rel="noopener">{{> "icons/custom/github"}}</a>
+                    {{/if}}
+
+                    {{#if @custom.email}}
+                        <a class="gh-social-link" href="mailto:{{ @custom.email }}" title="E-mail">{{> "icons/custom/email"}}</a>
+                    {{/if}}
+                    {{!-- CUSTOM.CHANGE.END --}}
                 </div>
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
