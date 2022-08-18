@@ -85,13 +85,20 @@
                     {{/if}}
                     {{!-- CUSTOM.CHANGE.END --}}
                 </div>
+
+                {{!-- CUSTOM.CHANGE: Add release button and change subscribe button --}}
+                {{#if @custom.release_page}}
+                    <a class="gh-head-button" href="{{ @custom.release_page }}">{{> "icons/custom/collection"}}{{#if @custom.release_button_text}}&nbsp;{{ @custom.release_button_text }}{{/if}}</a>
+                {{/if}}
+
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
-                        <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                        <a class="gh-head-button" href="#/portal/signup" data-portal="signup">{{> "icons/custom/subscribe"}}{{#if @custom.show_subscribe_button_text}}&nbsp;Subscribe{{/if}}</a>
                     {{else}}
-                        <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
+                        <a class="gh-head-button" href="#/portal/account" data-portal="account">{{> "icons/custom/account"}}{{#if @custom.show_subscribe_button_text}}&nbsp;Account{{/if}}</a>
                     {{/unless}}
                 {{/if}}
+                {{!-- CUSTOM.CHANGE.END --}}
             </div>
         </nav>
     </header>
