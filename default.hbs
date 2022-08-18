@@ -115,7 +115,13 @@
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
-            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+            <div><a>{{ @custom.footer_message}}</a></div>
+            <br>
+            {{#unless @member}}
+                <a href="#/portal/signup" style="text-align: center;" data-portal="signup">{{> "icons/custom/subscribe"}} Subscribe</a>
+            {{else}}
+                <a href="#/portal/account" style="text-align: center;" data-portal="account">{{> "icons/custom/account"}} My Account</a>
+            {{/unless}}
         </div>
     </footer>
 
