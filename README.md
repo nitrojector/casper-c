@@ -4,7 +4,7 @@
 
 # Custom changes
 
-> All changes can be found by searching for content enclosed within `CUSTOM.CHANGE` and `CUSTOM.CHANGE.END` comments
+> All changes in `.hbs` files can be found by searching for content enclosed within `CUSTOM.CHANGE` and `CUSTOM.CHANGE.END` comments
 
 1. Add custom icons under `/partials/icons/custom/`
 2. Remove signup call from `/post.hbs`
